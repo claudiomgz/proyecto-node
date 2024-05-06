@@ -1,5 +1,9 @@
 * {
     margin: 0;
+    text-decoration: none;
+}
+a {
+    color: inherit;
 }
 #carousel {
     max-height: 430px; 
@@ -18,9 +22,10 @@
 .contacto-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding: 0 25px;
+    max-width: 1000px;
+    margin: auto;
+    gap: 50px;
+    padding: 25px 50px;
 }
 .texto-descripcion {
     width: 500px;
@@ -34,13 +39,13 @@
     height: 300px;
     border: 2px solid white;
     border-radius: 4px;
-    margin: 20px 0;
+    margin-bottom: 25px;
 }
 .contacto-form {
     display: flex;
     flex-direction: column;
     width: 60%;
-    max-width: 700px;
+    max-width: 600px;
     margin: auto;
     padding: 16px;
     gap: 12px;
@@ -86,11 +91,30 @@
     background: #2e2e2e;
     color: white;
 }
+.redes-contacto {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    align-items: center;
+}
+.redes-links i {
+    text-align: center;
+    font-size: 36px;
+    margin: 0 15px;
+    transition: 0.2s ease;
+}
+.redes-links i:hover {
+    color: #414141;
+}
+.redes-links i:active {
+    color: #b3b3b3;
+}
 
 @media screen and (max-width: 992px) {
     .contacto-content {
         flex-direction: column;
         justify-content: center;
+        padding: 25px 10px;
     }
     .texto-descripcion {
         width: 80%;
@@ -101,5 +125,8 @@
     }
     .contacto-form {
         width: 90%;
+    }
+    input[type="checkbox"] {
+        transform: scale(1.5);
     }
 }
