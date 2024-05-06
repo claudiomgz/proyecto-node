@@ -1,3 +1,6 @@
+* {
+    margin: 0;
+}
 #carousel {
     max-height: 430px; 
     overflow:hidden;
@@ -7,15 +10,42 @@
     width: 100%; 
     height: fit-content;
 }
-/*Para Contacto*/
+/*Página Sobre Nosotros*/
+.contacto {
+    padding: 25px 0;
+    background: #b3b3b3;
+}
+.contacto-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0 25px;
+}
+.texto-descripcion {
+    width: 500px;
+    padding: 50px 0;
+    margin: auto;
+}
+.ubicacion {
+    margin: auto;
+}
+.gmaps-img {
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 20px 0;
+}
 .contacto-form {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     max-width: 700px;
     margin: auto;
-    padding: 10px;
-    gap: 24px;
+    padding: 16px;
+    gap: 12px;
+    background: grey;
+    border-radius: 8px;
 }
 .contacto-form label {
     display: flex;
@@ -31,7 +61,13 @@
 .contacto-form textarea {
     height: 100px;
     padding: 6px 8px;
+    margin-top: 10px;
     font-size: 16px;
+}
+.contacto-form input, .contacto-form select,
+.contacto-form textarea {
+    border-radius: 4px;
+    border: none;
 }
 .checkbox-texto {
     padding: 0 10px;
@@ -47,9 +83,23 @@
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background: #2bf52b;
+    background: #2e2e2e;
+    color: white;
 }
 
-@media screen and (max-width: 990px) {
-    
+@media screen and (max-width: 992px) {
+    .contacto-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .texto-descripcion {
+        width: 80%;
+        padding: 25px 0;
+    }
+    .gmaps-img {
+        height: 400px;
+    }
+    .contacto-form {
+        width: 90%;
+    }
 }
